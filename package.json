@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://amnot.github.io/portfolio",
+  "homepage": " ",
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@testing-library/dom": "^10.4.0",
