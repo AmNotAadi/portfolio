@@ -73,7 +73,6 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             Department of Electronics & Communication Engineering<br />
-            Madhav Institute of Technology & Science, Gwalior
           </motion.p>
 
           <motion.div
