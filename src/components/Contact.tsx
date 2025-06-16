@@ -9,38 +9,74 @@ import {
 const socialLinks = [
   {
     name: 'ResearchGate',
-    url: 'https://www.researchgate.net/profile/Swapnil-Jain',
+    url: 'https://www.researchgate.net/profile/swapnil_jain2',
     icon: '📚'
   },
   {
     name: 'Google Scholar',
-    url: 'https://scholar.google.com/citations?user=YOUR_ID',
+    url: 'https://scholar.google.com/citations?user=wyBzZvgAAAAJ',
     icon: '🎓'
   },
   {
     name: 'ORCID',
-    url: 'https://orcid.org/YOUR_ID',
+    url: 'https://orcid.org//0000-0002-1175-2860',
     icon: '🔬'
   },
   {
     name: 'Scopus',
-    url: 'https://www.scopus.com/authid/detail.uri?authorId=YOUR_ID',
+    url: 'http://www.scopus.com/authid/detail.url?authorId=57215304800',
     icon: '📊'
   }
 ];
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
     subject: '',
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [status, setStatus] = useState({
+    type: '',
+    message: ''
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setStatus({ type: 'loading', message: 'Sending message...' });
+
+    try {
+      const response = await fetch('https://formspree.io/f/mjkrrpbd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        }),
+      });
+
+      if (response.ok) {
+        setStatus({
+          type: 'success',
+          message: 'Message sent successfully!'
+        });
+        setFormData({
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: 'Failed to send message. Please try again.'
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -92,23 +128,19 @@ const Contact: React.FC = () => {
               <div className="bg-[#1F2937] rounded-xl p-6 shadow-lg">
                 <h3 className="text-xl font-semibold text-[#F9FAFB] mb-4">Social Links</h3>
                 
-                <div className="flex space-x-4">
-                  <a
-                    href="https://www.linkedin.com/in/swapnil-jain-123456789"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#3B82F6] hover:text-[#10B981] transition-colors"
-                  >
-                    LinkedIn
-                  </a>
-                  <a
-                    href="https://scholar.google.com/citations?user=123456789"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#3B82F6] hover:text-[#10B981] transition-colors"
-                  >
-                    Google Scholar
-                  </a>
+                <div className="grid grid-cols-2 gap-4">
+                  {socialLinks.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-[#3B82F6] hover:text-[#10B981] transition-colors"
+                    >
+                      <span className="text-xl">{link.icon}</span>
+                      <span>{link.name}</span>
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
@@ -119,21 +151,6 @@ const Contact: React.FC = () => {
               
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-[#E5E7EB] mb-1">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 rounded-lg bg-[#E5E7EB] text-[#1F2937] focus:ring-2 focus:ring-[#3B82F6] focus:outline-none"
-                    required
-                  />
-                </div>
-
-                <div>
                   <label htmlFor="email" className="block text-sm font-medium text-[#E5E7EB] mb-1">
                     Email
                   </label>
@@ -142,6 +159,21 @@ const Contact: React.FC = () => {
                     id="email"
                     name="email"
                     value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 rounded-lg bg-[#E5E7EB] text-[#1F2937] focus:ring-2 focus:ring-[#3B82F6] focus:outline-none"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-[#E5E7EB] mb-1">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
                     onChange={handleChange}
                     className="w-full px-4 py-2 rounded-lg bg-[#E5E7EB] text-[#1F2937] focus:ring-2 focus:ring-[#3B82F6] focus:outline-none"
                     required
@@ -163,11 +195,22 @@ const Contact: React.FC = () => {
                   />
                 </div>
 
+                {status.message && (
+                  <div className={`text-sm ${
+                    status.type === 'success' ? 'text-green-500' : 
+                    status.type === 'error' ? 'text-red-500' : 
+                    'text-blue-500'
+                  }`}>
+                    {status.message}
+                  </div>
+                )}
+
                 <button
                   type="submit"
                   className="w-full px-6 py-3 bg-[#3B82F6] text-white rounded-lg hover:bg-[#10B981] transition-colors"
+                  disabled={status.type === 'loading'}
                 >
-                  Send Message
+                  {status.type === 'loading' ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
