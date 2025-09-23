@@ -16,84 +16,84 @@ interface Seminar {
 const seminars: Seminar[] = [
   {
     id: "1",
-    title: "Recent Trends in VLSI Design",
-    type: "seminar",
-    date: "2023-03-15",
-    venue: "Department of Electronics, MITS Gwalior",
-    role: "organizer",
-    description: "Organized a seminar on recent trends in VLSI design, covering topics like low-power design, testing methodologies, and emerging technologies."
+    title: "One-week Short Term Course: Data-Driven Analytics with Machine Learning",
+    type: "fdp",
+    date: "June 12–16, 2023",
+    venue: "MNIT, Jaipur",
+    role: "participant",
+    description: "Attended a one-week short term course on Data-Driven Analytics with Machine Learning."
   },
   {
     id: "2",
-    title: "Advanced Digital Signal Processing",
-    type: "fdp",
-    date: "2023-06-20",
-    venue: "Department of Electronics, MITS Gwalior",
-    role: "organizer",
-    description: "Conducted a Faculty Development Program on advanced DSP techniques, including practical sessions on MATLAB implementation."
+    title: "Three Day International Conference on Cryptology",
+    type: "seminar",
+    date: "December 13–15, 2021",
+    venue: "LNM Institute of Information Technology, Jaipur",
+    role: "participant",
+    description: "Attended a three day international conference on Cryptology."
   },
   {
     id: "3",
-    title: "IoT and Embedded Systems",
-    type: "seminar",
-    date: "2023-09-10",
-    venue: "Department of Electronics, MITS Gwalior",
-    role: "organizer",
-    description: "Organized a seminar focusing on IoT applications and embedded systems design, with hands-on workshops on Arduino and Raspberry Pi."
+    title: "Three Day Faculty Development Program: NextG-2020",
+    type: "fdp",
+    date: "July 3–5, 2020",
+    venue: "Dept. of ECE, Oriental Institute of Science and Technology, Bhopal",
+    role: "participant",
+    description: "Attended a three day Faculty Development Program on NextG-2020."
   },
   {
     id: "4",
-    title: "Machine Learning in Electronics",
+    title: "One-week FDP: Blockchain Technology",
     type: "fdp",
-    date: "2023-11-05",
-    venue: "Department of Electronics, MITS Gwalior",
-    role: "organizer",
-    description: "Conducted a Faculty Development Program on machine learning applications in electronics, covering neural networks and deep learning."
+    date: "December 3–9, 2019",
+    venue: "E & ICT Academy, NIT Roorkee (held at IPEC Ghaziabad)",
+    role: "participant",
+    description: "Attended a one-week faculty development program on Blockchain Technology."
   },
   {
     id: "5",
-    title: "Quantum Computing Workshop",
-    type: "seminar",
-    date: "2024-01-20",
-    venue: "Department of Electronics, MITS Gwalior",
-    role: "organizer",
-    description: "Organized a workshop on quantum computing fundamentals and applications in electronics and communication."
+    title: "One-week FDP: Security & Privacy",
+    type: "fdp",
+    date: "December 3–8, 2018",
+    venue: "E & ICT Academy, NIT Warangal",
+    role: "participant",
+    description: "Attended a one-week faculty development program on Security & Privacy."
   },
   {
     id: "6",
-    title: "Advanced Communication Systems",
-    type: "fdp",
-    date: "2024-02-15",
-    venue: "Department of Electronics, MITS Gwalior",
-    role: "organizer",
-    description: "Conducted a Faculty Development Program on advanced communication systems, including 5G and beyond technologies."
+    title: "One-week STTP: CMOS, Mixed Signal and RF VLSI Design",
+    type: "seminar",
+    date: "January 30 – February 4, 2017",
+    venue: "IIT Kharagpur (NMEICT, MHRD)",
+    role: "participant",
+    description: "Attended a one-week short term training program on CMOS, mixed signal and RF VLSI design under NMEICT (MHRD)."
   },
   {
     id: "7",
-    title: "VLSI Design Methodologies",
+    title: "Paper Presentation: Development of Quantum Cryptographic Techniques for Enhancing Security",
     type: "seminar",
-    date: "2024-03-10",
-    venue: "Department of Electronics, MITS Gwalior",
-    role: "organizer",
-    description: "Organized a seminar on modern VLSI design methodologies and tools, with focus on industry practices."
+    date: "January 9–10, 2010",
+    venue: "International Conference on Recent Trends in Soft Computing and Information Technology, CIST Bhopal",
+    role: "participant",
+    description: "Presented a paper entitled 'Development of Quantum Cryptographic Techniques for Enhancing Security'."
   },
   {
     id: "8",
-    title: "Digital System Design",
-    type: "fdp",
-    date: "2024-04-05",
-    venue: "Department of Electronics, MITS Gwalior",
-    role: "organizer",
-    description: "Conducted a Faculty Development Program on digital system design, covering FPGA implementation and verification techniques."
+    title: "AICTE-ISTE One-week STTP: CMOS VLSI – Digital IC Design",
+    type: "seminar",
+    date: "June 23–27, 2008",
+    venue: "Yeshwantrao Chavan College of Engineering, Nagpur",
+    role: "participant",
+    description: "Attended AICTE-ISTE approved short term training program on CMOS VLSI – Digital IC design."
   },
   {
     id: "9",
-    title: "Emerging Technologies in Electronics",
+    title: "AICTE-ISTE STTP: Convergence of Social Choice and Individual Values",
     type: "seminar",
-    date: "2024-05-20",
-    venue: "Department of Electronics, MITS Gwalior",
-    role: "organizer",
-    description: "Organized a seminar on emerging technologies in electronics, including AI, IoT, and quantum computing applications."
+    date: "June 2–6, 2008",
+    venue: "College of Management, NRIIST, Bhopal",
+    role: "participant",
+    description: "Attended AICTE-ISTE approved STTP on 'Convergence of social choice and individual values – the ethical dilemma of managing modern business organization'."
   }
 ];
 
