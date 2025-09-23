@@ -61,7 +61,7 @@ const About: React.FC = () => {
 
               <div className="text-center space-y-2">
                 <h3 className="text-2xl font-semibold text-[#F9FAFB]">Dr. Swapnil Jain</h3>
-                <p className="text-[#D1D5DB]">Assistant Professor</p>
+                <p className="text-[#D1D5DB]"></p>
               </div>
             </motion.div>
 

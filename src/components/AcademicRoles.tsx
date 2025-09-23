@@ -21,7 +21,7 @@ const roles: Role[] = [
   },
   {
     id: 1,
-    title: "Assistant Professor",
+    title: "Professor",
     institution: "Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore",
     period: "2016 – Aug 2025",
   },
