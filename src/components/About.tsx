@@ -7,14 +7,14 @@ import {
 } from '@heroicons/react/24/outline';
 import tempProfile from '../assets/temp-profile.jpg';
 
-const bio = `Dr. Swapnil Jain is an accomplished academician and researcher with extensive experience in Electronics and Communication Engineering. With a strong focus on Digital Signal Processing, Blockchain Technology, and Non-Orthogonal Multiple Access, he has made significant contributions to both teaching and research. His work spans across quantum cryptography and optical communication, making him a versatile expert in the field.`;
+const bio = `Dr. Swapnil Jain is an accomplished academician and researcher with extensive experience in Electronics and Communication Engineering. His areas of interest include Digital Signal Processing, Analog and Digital Communication, Information Theory & Coding, Data Communication, and Computer Network Cryptography. His work spans Quantum Cryptography and Digital Communication, making him a versatile expert in the field.`;
 
 const education = [
   {
     degree: "Ph.D.",
     institution: "MGCGV, Chitrakoot",
     year: "2016",
-    details: "Specialized in Digital Signal Processing and Wireless Communication"
+    details: "Specialized in Quantum Cryptography"
   },
   {
     degree: "M.Tech. in Digital Communication",
@@ -23,7 +23,7 @@ const education = [
     details: "Focused on Advanced Communication Systems and Signal Processing"
   },
   {
-    degree: "Bachelor of Engineering (Electronics)",
+    degree: "BE in Electronics Engineering",
     institution: "YCCE, Nagpur",
     year: "1998",
     details: "Comprehensive study of Electronics and Communication Engineering"
