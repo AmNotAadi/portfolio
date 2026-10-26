@@ -6,7 +6,7 @@ import Publications from './components/Publications';
 import Patents from './components/Patents';
 import Seminars from './components/Seminars';
 import Contact from './components/Contact';
-import TechnicalSkills from './components/TechnicalSkills';
+// import TechnicalSkills from './components/TechnicalSkills';
 import AcademicRoles from './components/AcademicRoles';
 import SubjectsOfInterest from './components/SubjectsOfInterest';
 
@@ -18,7 +18,7 @@ const App: React.FC = () => {
         <Hero />
         <About />
         <SubjectsOfInterest />
-        <TechnicalSkills />
+        {/* <TechnicalSkills /> */}
         <AcademicRoles />
         <Publications />
         <Patents />
