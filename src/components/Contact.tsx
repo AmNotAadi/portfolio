@@ -52,8 +52,11 @@ const Contact: React.FC = () => {
                     <EnvelopeIcon className="h-6 w-6 text-[#3B82F6] flex-shrink-0" />
                     <div>
                       <p className="text-[#E5E7EB]">Email</p>
-                      <a href="mailto:contact@swapniljain.xyz" className="text-[#3B82F6] hover:text-[#10B981] transition-colors">
-                        contact@swapniljain.xyz
+                      <a href="mailto:hodec@mpu.ac.in" className="block text-[#3B82F6] hover:text-[#10B981] transition-colors">
+                        hodec@mpu.ac.in
+                      </a>
+                      <a href="mailto:swapniljain76@gmail.com" className="block text-[#3B82F6] hover:text-[#10B981] transition-colors">
+                        swapniljain76@gmail.com
                       </a>
                     </div>
                   </div>

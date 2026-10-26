@@ -13,38 +13,44 @@ interface Role {
 
 const roles: Role[] = [
   {
-    id: 0,
-    title: "HOD, ECE Department",
-    institution: "Sagar Institute of Research and Technology (SIRT), Bhopal",
-    period: "Aug 2025 – Present",
+    id: 1,
+    title: "HOD, EEE and HOD (In Charge), CSE",
+    institution: "Madhyanchal Professional University",
+    period: "September 2026 – Present",
     featured: true,
   },
   {
-    id: 1,
+    id: 0,
+    title: "HOD, ECE Department",
+    institution: "Sagar Institute of Research and Technology (SIRT), Bhopal",
+    period: "Aug 2025 – Aug 2026",
+  },
+  {
+    id: 2,
     title: "Professor",
     institution: "Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore",
     period: "2016 – Aug 2025",
   },
   {
-    id: 2,
+    id: 3,
     title: "Associate Professor",
     institution: "NRI Institute of Information Science & Technology, Bhopal",
     period: "Feb 2015 – Jul 2016",
   },
   {
-    id: 3,
+    id: 4,
     title: "Associate Professor",
     institution: "Corporate Institute of Science & Technology, Bhopal",
     period: "Jun 2012 – Feb 2014",
   },
   {
-    id: 4,
+    id: 5,
     title: "Assistant Professor",
     institution: "Sagar Institute of Science & Technology, Bhopal",
     period: "Oct 2009 – May 2012",
   },
   {
-    id: 5,
+    id: 6,
     title: "Lecturer / Assistant Professor",
     institution: "NRI Institute of Information Science & Technology, Bhopal",
     period: "Feb 2002 – Sep 2009",
@@ -64,7 +70,7 @@ const AcademicRoles: React.FC = () => {
           <h2 className="heading-primary text-center mb-6 text-[#F9FAFB]">Experience</h2>
 
           <p className="text-center text-[#D1D5DB] max-w-3xl mx-auto mb-12">
-            I have around 23 years of teaching experience, including 16.5 years after M.Tech. and 8.5 years after Ph.D.
+            I have around 24 years of teaching experience, including 18 years after M.Tech. and 10 years after Ph.D.
           </p>
 
           <div className="max-w-4xl mx-auto space-y-8">
